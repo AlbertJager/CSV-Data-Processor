@@ -27,6 +27,8 @@ def row_validator(row: dict) -> bool:
     name, age, salary, department = row["name"].strip(), row["age"].strip(), row["salary"].strip(), row["department"].strip()
     if any((not age.isdigit(), not salary.isdigit(), not name.isalpha(), not department.isalpha())):
         return False
+    if int(age) < 18 or int(salary) < 100:
+        return False
     return True
 
 

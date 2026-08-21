@@ -151,6 +151,8 @@ cleaned_employees.csv
 A row is considered invalid if:
 
 * one or more values are missing;
+* `age` is less than 18.
+* `salary` less than 100.
 * `age` is not a number;
 * `salary` is not a number;
 * `name` contains non-alphabetical characters;
